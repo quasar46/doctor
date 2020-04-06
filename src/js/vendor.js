@@ -4,7 +4,6 @@ import $ from 'jquery';
 import 'jquery';
 import 'slick-carousel';
 
-
 svg4everybody();
 
 window.$ = $;
