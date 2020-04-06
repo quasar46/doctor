@@ -61,6 +61,7 @@
     "@babel/polyfill": "7.4.3",
     "@fancyapps/fancybox": "3.5.7",
     "fancybox": "3.0.1",
+    "gzipped": "0.0.5",
     "jquery": "3.4.0",
     "ninelines-ua-parser": "1.1.6",
     "normalize.css": "8.0.1",

@@ -1,5 +1,4 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
-$fancybox-image-url: "../images";
-@import "../../node_modules/fancybox/dist/scss/jquery.fancybox";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";

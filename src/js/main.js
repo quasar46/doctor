@@ -200,11 +200,11 @@ $(document).ready(function () {
 })
 
 //fancybox
-$(document).ready(function () {
-	$("[data-fancybox]").fancybox({
+// $(document).ready(function () {
+// 	$("[data-fancybox]").fancybox({
 
-	});
-});
+// 	});
+// });
 
 // услуги
 $('.direction__item').on('click', function () {
