@@ -64,6 +64,7 @@
 
 .direction__wrapper {
 	display: flex;
+	flex-direction: column;
 	@media (max-width: 992px) {
 		flex-direction: column;
 		& > ul {
@@ -79,7 +80,6 @@
 .direction__item {
 	padding: 30px 20px;
 	box-shadow: 0 0 5px 5px #fafafa;
-	margin-bottom: 30px;
 	background-color: #fff;
 	position: relative;
 	z-index: 4;
@@ -147,20 +147,39 @@
 
 .direction__left-list {
 	margin-top: 70px;
-	margin-right: 50px;
-	max-width: 50%;
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	.direction__item {
+		&:first-child {
+			margin-right: 30px;
+			@media (max-width: 768px) {
+				margin-right: 0;
+			}
+		}
+		@media (max-width: 768px) {
+			max-width: 555px;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+	@media (max-width: 768px) {
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 0;
+	}
 	@media (max-width: 576px) {
 		margin-top: 0;
 	}
 }
 
 .direction__right-list {
-	margin-top: -50px;
-	max-width: 50%;
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	.direction__item {
+		max-width: 555px;
+		width: 100%;
+	}
 	@media (max-width: 992px) {
 		margin-top: 0;
 	}

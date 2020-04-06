@@ -11,9 +11,11 @@
 		}
 	}
 	.ta {
-		transition: all 1s;
-		height: 100px;
-		overflow: hidden;
+		@media (max-width: 576px) {
+			transition: all 1s;
+			height: 100px;
+			overflow: hidden;
+		}
 	}
 	@media (max-width: 992px) {
 		background-image: none;

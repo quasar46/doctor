@@ -8,7 +8,6 @@ body {
 	color: $color-text;
 	font-size: 17px;
 	font-family: $opensans-font;
-	overflow-x: hidden;
 }
 
 html {
@@ -71,13 +70,12 @@ h3.subtitle {
 
 a {
 	text-decoration: none;
-	&.read-next {
+	&.show-text {
+		display: block;
 		text-decoration: underline;
-		display: none;
+		display: inline-block;
 		color: $color-light-blue;
-		@media (max-width: 576px) {
-			display: block;
-		}
+		cursor: pointer;
 	}
 }
 

@@ -7,6 +7,7 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		nav: false,
 		centerMode: false,
+		dots: true,
 		responsive: [
 			{
 				breakpoint: 1100,
@@ -20,8 +21,7 @@ $(document).ready(function () {
 				breakpoint: 576,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1,
-					dots: true
+					slidesToScroll: 1
 				}
 			}
 		]
@@ -83,9 +83,10 @@ $(document).ready(function () {
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		dots: true,
 		responsive: [
 			{
-				breakpoint: 992,
+				breakpoint: 955,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
@@ -95,8 +96,7 @@ $(document).ready(function () {
 				breakpoint: 576,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1,
-					dots: true
+					slidesToScroll: 1
 				}
 			}
 		]
@@ -145,32 +145,35 @@ for (i = 0; i < acc.length; i++) {
 	});
 }
 
-// show more
+
+// show text
 $(document).ready(function () {
-	var min = 100;
-	$(".ta").each(function (indx, el) {
-		var b = $(el),
-			max = el.scrollHeight,
-			a = b.next(".read-next");
-		if (max <= 100) a.hide();
-		else a.on("click", function (event) {
-			var h = b.height();
-			b.height(h < max ? max : min);
-			$(this).text(h < max ? "свернуть" : "показать полностью");
-			return false
-		})
+	$('.show-text').on('click', function () {
+		if ($(this).prev().is(':visible')) {
+			$(this).text('показать полностью');
+			$(this).prev().hide('slow');
+		} else {
+			$(this).text('скрыть').css('display', 'block');
+			$(this).prev().show('slow');
+		}
 	})
-	var dots = document.querySelectorAll('.slick-slider-3 .slick-dots button');
-	// сворачивает блок при клике на дот
-	$(dots).on('click', function () {
-		$('.ta').css('height', '100px');
-		$('.read-next').html('показать полностью');
-	})
-	// сворачивает блок при слайде
-	$('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
-		$('.ta').css('height', '100px');
-		$('.read-next').html('показать полностью');
-	})
+});
+
+$('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
+	if ($('.show-text').prev().is(':visible')) {
+		$('.show-text').text('показать полностью');
+		$('.show-text').prev().hide('slow');
+	}
+})
+
+
+$(document).ready(function () {
+	if ($('.activities__title p').height() > 100) {
+		$('.activities__title a').addClass('show-text');
+		console.log('высота p больше 100');
+	} else {
+		console.log('высота p меньшье 100');
+	}
 });
 
 // anchor
@@ -207,6 +210,22 @@ $(document).ready(function () {
 // });
 
 // услуги
-$('.direction__item').on('click', function () {
-	$('.direction__top').addClass.toggle('active')
+$(document).ready(function () {
+	$('.direction__item').on('click', function () {
+		$('.direction__top').addClass.toggle('active')
+	})
+})
+
+// popup & overlay
+$(document).ready(function () {
+	$('#write-to-me').on('click', function () {
+		$('body').addClass('overlay');
+		$('.popup').addClass('active');
+	})
+	if ($('body').hasClass('overlay')) {
+		$('body').on('click', function () {
+			$('.popup').removeClass('active');
+			$('body').removeClass('overlay');
+		})
+	}
 })

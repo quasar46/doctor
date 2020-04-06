@@ -1,0 +1,11 @@
+.overlay {
+    transition: ease 1s;
+    background-color: rgba(24, 91, 131, 0.2);
+    transition: ease 1s;
+    z-index: 999999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
