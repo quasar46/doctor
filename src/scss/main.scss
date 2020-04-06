@@ -1,0 +1,28 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "base";
+@import "helpers";
+@import "blocks/main-nav";
+@import "blocks/header";
+@import "blocks/name";
+@import "blocks/direction";
+@import "blocks/results";
+@import "blocks/about-me";
+@import "blocks/reviews";
+@import "blocks/result-slider";
+@import "blocks/reviews-slider";
+@import "blocks/activities";
+@import "blocks/main-footer";
+@import "blocks/slick";
+@import "blocks/burger";
+@import "blocks/acc";
+@import "blocks/mobile-menu";
+@import "blocks/member";
+@import "blocks/certificats";
+@import "blocks/certificats-slider";

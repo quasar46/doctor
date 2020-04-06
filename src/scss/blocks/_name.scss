@@ -1,0 +1,164 @@
+.name {
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 100px;
+
+	.container {
+		@media (max-width: 768px) {
+			padding: 0;
+		}
+	}
+	@media (max-width: 992px) {
+		background-image: none;
+	}
+	@media (max-width: 576px) {
+		padding-bottom: 60px;
+	}
+}
+
+.name__wrapper {
+	display: flex;
+	align-items: center;
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+
+.name__title {
+	color: $color-dark-blue;
+	font-size: 26px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	@media (max-width: 576px) {
+		font-size: 17px;
+		i.br {
+			display: block;
+		}
+	}
+	span {
+		display: block;
+		font-size: 30px;
+		font-weight: 700;
+		margin-bottom: 15px;
+		@media (max-width: 576px) {
+			font-size: 25px;
+		}
+	}
+}
+
+.name__list {
+	li {
+		padding-left: 20px;
+		margin-bottom: 15px;
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -4px;
+			width: 8px;
+			height: 8px;
+			background-color: $color-dark-blue;
+			border-radius: 50%;
+		}
+	}
+	@media (max-width: 768px) {
+		padding: 0 15px;
+		padding-top: 20px;
+		width: 100%;
+		align-self: flex-start;
+		order: 1;
+		li {
+			display: none;
+		}
+	}
+}
+.name__photo {
+	@media (max-width: 768px) {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		background-color: #f2f2f2;
+		padding-top: 10px;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 126px;
+			height: 126px;
+			background-color: #fff;
+			border-radius: 50%;
+			top: -50px;
+			left: -50px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 177px;
+			height: 177px;
+			background-color: $color-dark-blue;
+			border-radius: 50%;
+			bottom: -50px;
+			right: -50px;
+		}
+	}
+}
+.name__photo-pic {
+	position: relative;
+	height: 594px;
+	width: 382px;
+	background-image: url("../images/photo.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	@media (max-width: 992px) {
+		background-image: url("../images/photo-full.png");
+	}
+	@media (max-width: 768px) {
+		background-image: url("../images/photo-full.png");
+		width: 235px;
+		height: 315px;
+	}
+}
+
+.name__btns {
+	display: flex;
+	margin-top: 40px;
+
+	a {
+		line-height: 43px;
+		padding: 2px 30px;
+		background-color: $color-light-blue;
+		border-radius: 10px;
+		color: white;
+
+		&:first-child {
+			margin-right: 20px;
+		}
+		@media (max-width: 576px) {
+			font-size: 16px;
+		}
+	}
+}
+
+.name__circle {
+	position: absolute;
+	width: 1783px;
+	height: 1656px;
+	top: -990px;
+	left: -500px;
+	z-index: 1;
+	.circle-1 {
+		background-image: url("../images/name-circle.svg");
+		background-repeat: no-repeat;
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	@media(max-width: 992px) {
+		display: none;
+	}
+}

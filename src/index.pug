@@ -1,0 +1,284 @@
+extends pug/base
+
+append vars
+	//- ...
+
+block content
+
+	header.main-header#anchor1
+		.container
+			nav.main-nav
+				.burger
+					img(src="images/burger.svg", alt="" width="32" height="24")
+				ul.main-nav__list
+					li
+						a(href="#anchor1").anchor-link Главная
+					li
+						a(href="#anchor2") Направления
+					li
+						a(href="#anchor3") Результаты
+					li
+						a(href="#anchor4") Обо мне
+					li
+						a(href="#anchor5") Отзывы
+					li
+						a(href="#anchor6") Контакты
+				ul.main-nav__contacts
+					li
+						a(href="tel:81234567890") 8 (123) 456 78 90
+					li
+						span Курск, ул. Ленина, 50
+	main
+		section.name
+			.container
+				.name__circle
+					.circle-1
+				.name__wrapper
+					ul.name__list
+						h2.name__title <span>Флеболог</span> <br> Синицын <i class="br"></i> Александр Александрович
+						li Lorem ipsum dolor sit amet.
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit.
+						li Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						.name__btns
+							a(href="tel:8247835") Позвонить
+							a(href="email:asdad@asdasd.com") Написать
+					.name__photo
+						.name__photo-pic
+
+		section.direction#anchor2
+			.container
+				.direction__circle
+					span.circle-1
+					span.circle-2
+					span.circle-3
+				h2.main-title Услуги
+				h3.subtitle Услуги
+				.direction__wrapper
+					ul.direction__left-list
+						li.direction__item
+							.direction__top.accordion
+								.direction__picture
+									<svg width="80" height="80" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+										<path d="M504.485,103.209C508.636,103.209 512,99.845 512,95.694L512,71.648C512,49.825 494.245,32.071 472.423,32.071L191.875,32.071C170.052,32.071 152.298,49.826 152.298,71.648L152.298,106.623C65.904,119.928 0,186.864 0,267.196C0,293.431 7.197,319.504 20.812,342.597C32.916,363.127 50.099,381.381 70.736,395.688L40.633,469.596C39.525,472.318 40.139,475.524 42.177,477.641C44.512,480.066 48.289,480.637 51.236,479.005L145.69,426.663C158.185,429 171.01,430.184 183.86,430.184C250.239,430.184 308.51,398.838 340.838,351.968L452.059,430.476C454.903,432.483 458.859,432.24 461.438,429.904C463.625,427.923 464.454,424.76 463.521,421.96L440.098,351.695L472.422,351.695C494.245,351.695 511.999,333.94 511.999,312.118L511.999,132.099C511.999,127.948 508.635,124.584 504.484,124.584C500.333,124.584 496.969,127.948 496.969,132.099L496.969,312.118C496.969,325.654 485.958,336.666 472.421,336.666L429.671,336.666C424.631,336.666 420.945,341.768 422.542,346.557L442.022,404.996L348.781,339.179C360.895,317.458 367.717,293.021 367.717,267.195C367.717,177.325 285.239,104.211 183.858,104.211C178.285,104.211 172.773,104.444 167.326,104.877L167.326,71.647C167.326,58.111 178.338,47.099 191.874,47.099L472.422,47.099C485.958,47.099 496.97,58.111 496.97,71.647L496.97,95.694C496.971,99.845 500.334,103.209 504.485,103.209ZM183.859,415.152C171.065,415.152 158.301,413.888 145.922,411.396C144.174,411.043 142.356,411.325 140.796,412.19L62.592,455.528L86.968,395.682C88.332,392.331 87.116,388.485 84.074,386.528C40.841,358.706 15.029,314.096 15.029,267.196C15.029,195.065 74.238,134.834 152.297,121.845L152.297,312.118C152.297,333.941 170.052,351.695 191.874,351.695L322.365,351.695C291.826,390.024 241.132,415.152 183.859,415.152ZM183.859,119.241C276.952,119.241 352.689,185.614 352.689,267.196C352.689,292.289 345.515,315.939 332.883,336.666L191.875,336.666C178.339,336.666 167.327,325.655 167.327,312.118L167.327,119.951C172.767,119.485 178.281,119.241 183.859,119.241Z" style="fill-rule:nonzero;"/>
+										<path d="M309.927,200.247C298.265,189.386 277.185,187.92 254.851,207.392C232.517,187.919 211.436,189.384 199.776,200.247C188.036,211.183 185.376,232.699 203.007,252.661C219.959,271.855 248.543,298.301 249.751,299.417C252.592,302.043 257.107,302.042 259.949,299.417C261.157,298.301 289.741,271.855 306.694,252.661C324.327,232.699 321.666,211.184 309.927,200.247ZM295.432,242.712C283.167,256.598 263.948,275.024 254.852,283.605C245.756,275.025 226.543,256.605 214.273,242.712C203.003,229.952 203.603,217.223 210.022,211.245C212.648,208.799 216.29,207.369 220.683,207.369C228.433,207.369 238.521,211.819 249.491,222.988C252.394,225.944 257.31,225.944 260.213,222.988C277.403,205.49 292.423,204.483 299.683,211.245C306.1,217.224 306.701,229.952 295.432,242.712Z" style="fill-rule:nonzero;"/>
+									</svg>
+								span.direction__title Консультация
+							.direction__bottom.panel
+								p Главный герой — 27-летний Илья Горюнов, семь лет отсидевший в тюрьме по ложному обвинению в распространении наркотиков. Когда Илья выходит на свободу, он понимает, что прежняя жизнь, по которой он тосковал, разрушена, и вернуться к ней он больше не сможет. 
+						li.direction__item
+							.direction__top.accordion
+								.direction__picture
+									<svg width="80" height="80" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+										<path d="M405.537,203.085C405.507,203.047 405.474,203.009 405.444,202.972L361.549,141.769L361.549,116.471L379.012,116.471C383.478,116.471 387.096,112.853 387.096,108.387L387.096,8.084C387.096,3.618 383.478,0 379.012,0L132.99,0C128.524,0 124.906,3.619 124.906,8.084L124.906,108.386C124.906,112.852 128.524,116.47 132.99,116.47L150.455,116.47L150.455,141.768L106.515,203.031C101.283,208.732 98.41,216.089 98.41,223.827L98.41,481.205C98.41,498.185 112.223,511.998 129.203,511.998L382.797,511.998C399.777,511.998 413.59,498.185 413.59,481.205L413.59,401.043L413.59,251.688L413.59,223.827C413.591,216.116 410.737,208.781 405.537,203.085ZM337.893,16.168L370.928,16.168L370.928,100.302L353.465,100.302L337.893,100.302L337.893,16.168ZM345.381,116.471L345.381,136.285L166.623,136.285L166.623,116.471L345.381,116.471ZM288.688,16.168L321.723,16.168L321.723,100.302L288.688,100.302L288.688,16.168ZM239.484,16.168L272.519,16.168L272.519,100.302L239.484,100.302L239.484,16.168ZM190.277,16.168L223.314,16.168L223.314,100.302L190.277,100.302L190.277,16.168ZM141.074,100.302L141.074,16.168L174.109,16.168L174.109,100.302L158.539,100.302L141.074,100.302ZM397.423,392.961L189.541,392.961C185.075,392.961 181.457,396.58 181.457,401.045C181.457,405.51 185.075,409.129 189.541,409.129L397.423,409.129L397.423,481.207C397.423,489.271 390.862,495.832 382.798,495.832L129.204,495.832C121.139,495.832 114.579,489.271 114.579,481.207L114.579,409.129L161.514,409.129C165.98,409.129 169.598,405.51 169.598,401.045C169.598,396.58 165.98,392.961 161.514,392.961L114.579,392.961L114.579,259.773L397.423,259.773L397.423,392.961ZM397.423,243.604L114.579,243.604L114.579,223.827C114.579,220.047 116.031,216.453 118.667,213.709C119.041,213.32 119.369,212.901 119.652,212.458L162.689,152.454L349.314,152.454L392.345,212.452C392.628,212.896 392.958,213.319 393.333,213.708C395.97,216.456 397.423,220.049 397.423,223.829L397.423,243.604Z" style="fill-rule:nonzero;"/>
+									</svg>
+								span.direction__title Медикаментозная <br> терапия
+							.direction__bottom.panel
+								p Главный герой — 27-летний Илья Горюнов, семь лет отсидевший в тюрьме по ложному обвинению в распространении наркотиков. Когда Илья выходит на свободу, он понимает, что прежняя жизнь, по которой он тосковал, разрушена, и вернуться к ней он больше не сможет. 
+					ul.direction__right-list
+						li.direction__item
+							.direction__top.accordion
+								.direction__picture
+									<svg width="80" height="80" viewBox="0 0 513 513" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+										<path d="M497.036,459.676L129.738,459.676C128.81,459.676 127.923,459.845 127.096,460.14L203.675,383.561L203.737,383.623C205.214,385.1 207.216,385.929 209.305,385.929C211.393,385.929 213.395,385.1 214.873,383.623L272.415,326.08C273.711,326.919 275.199,327.342 276.687,327.342C278.701,327.342 280.717,326.574 282.255,325.036L499.865,107.426C516.049,91.241 516.049,64.905 499.865,48.72C483.678,32.535 457.344,32.532 441.158,48.72L416.576,73.301C413.501,76.376 413.501,81.36 416.576,84.434C419.651,87.508 424.635,87.51 427.71,84.434L452.292,59.853C462.337,49.807 478.683,49.806 488.729,59.853C498.775,69.899 498.775,86.246 488.729,96.292L276.685,308.334L240.248,271.895L409.6,102.542C412.675,99.467 412.675,94.482 409.6,91.409C406.523,88.333 401.539,88.335 398.466,91.409L223.546,266.329C220.873,269.002 220.527,273.117 222.502,276.168L164.959,333.711C163.483,335.187 162.654,337.19 162.654,339.278C162.654,341.366 163.483,343.369 164.959,344.845L165.021,344.907L111.267,398.661C109.791,400.137 108.962,402.14 108.962,404.228L108.962,459.267C108.962,460.197 109.143,461.092 109.448,461.935C108.028,460.539 106.082,459.676 103.932,459.676L7.873,459.676C3.524,459.676 0,463.201 0,467.549C0,471.897 3.524,475.422 7.873,475.422L103.932,475.422C108.281,475.422 111.805,471.897 111.805,467.549C111.805,466.603 111.63,465.701 111.324,464.862C112.033,465.561 112.866,466.145 113.822,466.54C114.796,466.943 115.819,467.139 116.833,467.139C118.852,467.139 120.833,466.359 122.333,464.896C122.036,465.726 121.865,466.616 121.865,467.549C121.865,471.897 125.39,475.422 129.738,475.422L497.037,475.422C501.386,475.422 504.91,471.897 504.91,467.549C504.909,463.2 501.385,459.676 497.036,459.676ZM236.986,290.903L261.153,315.07L236.986,339.238L236.986,290.903ZM210.13,310.807L221.24,299.697L221.24,354.984L210.13,366.095L210.13,310.807ZM194.385,326.552L194.385,352.001L181.722,339.339L181.659,339.276L194.385,326.552ZM124.707,407.488L176.155,356.04L192.541,372.426L124.707,440.26L124.707,407.488Z" style="fill-rule:nonzero;"/>
+									</svg>
+								span.direction__title Консультация
+							.direction__bottom.panel
+								p Главный герой — 27-летний Илья Горюнов, семь лет отсидевший в тюрьме по ложному обвинению в распространении наркотиков. Когда Илья выходит на свободу, он понимает, что прежняя жизнь, по которой он тосковал, разрушена, и вернуться к ней он больше не сможет. 
+						li.direction__item
+							.direction__top.accordion
+								.direction__picture
+									<svg width="80" height="80" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+										<g>
+											<path d="M394.821,302.467C394.821,225.921 332.546,163.646 256,163.646C179.454,163.646 117.179,225.921 117.179,302.467C117.179,379.013 179.454,441.288 256,441.288C332.546,441.288 394.821,379.014 394.821,302.467ZM132.179,302.467C132.179,234.192 187.725,178.646 256,178.646C324.275,178.646 379.821,234.192 379.821,302.467C379.821,370.742 324.275,426.288 256,426.288C187.725,426.288 132.179,370.743 132.179,302.467Z" style="fill-rule:nonzero;"/>
+											<path d="M484.297,119.199L389.771,119.199L389.771,96.395C389.771,92.253 386.414,88.895 382.271,88.895L374.619,88.895L374.619,53.967C374.619,38.692 362.191,26.264 346.916,26.264L212.677,26.264C208.534,26.264 205.177,29.622 205.177,33.764C205.177,37.906 208.534,41.264 212.677,41.264L346.915,41.264C353.92,41.264 359.618,46.963 359.618,53.967L359.618,88.894L344.313,88.894L344.313,64.069C344.313,59.927 340.956,56.569 336.813,56.569L175.187,56.569C171.044,56.569 167.687,59.927 167.687,64.069L167.687,88.894L152.382,88.894L152.382,53.967C152.382,46.963 158.08,41.264 165.085,41.264L177.5,41.264C181.643,41.264 185,37.906 185,33.764C185,29.622 181.643,26.264 177.5,26.264L165.085,26.264C149.81,26.264 137.382,38.692 137.382,53.967L137.382,88.894L129.73,88.894C125.587,88.894 122.23,92.252 122.23,96.394L122.23,119.199L27.703,119.199C12.428,119.199 0,131.627 0,146.902L0,258.087C0,262.229 3.357,265.587 7.5,265.587C11.643,265.587 15,262.229 15,258.087L15,146.902C15,139.898 20.698,134.199 27.703,134.199L46.467,134.199L46.467,167.105C46.467,171.247 49.824,174.605 53.967,174.605L104.476,174.605C108.619,174.605 111.976,171.247 111.976,167.105L111.976,134.199L400.025,134.199L400.025,167.105C400.025,171.247 403.382,174.605 407.525,174.605L458.034,174.605C462.177,174.605 465.534,171.247 465.534,167.105L465.534,134.199L484.298,134.199C491.303,134.199 497.001,139.898 497.001,146.902L497.001,258.087C497.001,262.229 500.358,265.587 504.501,265.587C508.644,265.587 512.001,262.229 512.001,258.087L512.001,146.902C512,131.627 499.572,119.199 484.297,119.199ZM374.771,119.199L329.161,119.199L329.161,103.894L374.771,103.894L374.771,119.199ZM182.687,71.569L329.314,71.569L329.314,88.894L321.661,88.894C317.518,88.894 314.161,92.252 314.161,96.394L314.161,119.199L197.84,119.199L197.84,96.395C197.84,92.253 194.483,88.895 190.34,88.895L182.687,88.895L182.687,71.569ZM137.229,103.895L182.839,103.895L182.839,119.2L137.229,119.2L137.229,103.895ZM96.976,159.605L61.467,159.605L61.467,134.199L96.976,134.199L96.976,159.605ZM450.533,159.605L415.024,159.605L415.024,134.199L450.533,134.199L450.533,159.605Z" style="fill-rule:nonzero;"/>
+											<path d="M504.5,285.607C500.357,285.607 497,288.965 497,293.107L497,458.033C497,465.037 491.302,470.736 484.297,470.736L27.703,470.736C20.698,470.736 15,465.037 15,458.033L15,293.107C15,288.965 11.643,285.607 7.5,285.607C3.357,285.607 0,288.965 0,293.107L0,458.033C0,473.308 12.428,485.736 27.703,485.736L484.297,485.736C499.572,485.736 512,473.308 512,458.033L512,293.107C512,288.965 508.643,285.607 504.5,285.607Z" style="fill-rule:nonzero;"/>
+											<path d="M293.805,393.382L293.805,340.272L346.915,340.272C351.058,340.272 354.415,336.914 354.415,332.772L354.415,272.162C354.415,268.02 351.058,264.662 346.915,264.662L293.805,264.662L293.805,211.552C293.805,207.41 290.448,204.052 286.305,204.052L225.696,204.052C221.553,204.052 218.196,207.41 218.196,211.552L218.196,264.662L165.086,264.662C160.943,264.662 157.586,268.02 157.586,272.162L157.586,332.772C157.586,336.914 160.943,340.272 165.086,340.272L218.196,340.272L218.196,393.382C218.196,397.524 221.553,400.882 225.696,400.882L286.305,400.882C290.447,400.882 293.805,397.524 293.805,393.382ZM278.805,332.772L278.805,385.882L233.196,385.882L233.196,332.772C233.196,328.63 229.839,325.272 225.696,325.272L172.586,325.272L172.586,279.662L225.696,279.662C229.839,279.662 233.196,276.304 233.196,272.162L233.196,219.052L278.805,219.052L278.805,272.162C278.805,276.304 282.162,279.662 286.305,279.662L339.415,279.662L339.415,325.272L286.305,325.272C282.162,325.272 278.805,328.63 278.805,332.772Z" style="fill-rule:nonzero;"/>
+										</g>
+									</svg>
+								span.direction__title Медикаментозная <br> терапия
+							.direction__bottom.panel
+								p Главный герой — 27-летний Илья Горюнов, семь лет отсидевший в тюрьме по ложному обвинению в распространении наркотиков. Когда Илья выходит на свободу, он понимает, что прежняя жизнь, по которой он тосковал, разрушена, и вернуться к ней он больше не сможет. 
+		
+		section.results#anchor3
+			.container
+				h2.main-title.main-title--center Результаты
+				h3.subtitle.subtitle--center Результаты
+			.result__wrapper
+				.container
+					.results__circle
+						span.circle-1
+					.result-slider.slick-slider-1
+						.item
+							.item__picture
+								img(src="../images/item-slick.jpg" alt="")
+						.item
+							.item__picture
+								img(src="../images/item-slick.jpg" alt="")
+						.item
+							.item__picture
+								img(src="../images/item-slick.jpg" alt="")
+						.item
+							.item__picture
+								img(src="../images/item-slick.jpg" alt="")
+						.item
+							.item__picture
+								img(src="../images/item-slick.jpg" alt="")
+						.item
+							.item__picture
+								img(src="../images/item-slick.jpg" alt="")
+
+		section.about-me#anchor4
+			.container
+				.about-me__wrapper
+					.about-me__left
+						.about-me__picture
+							img(src="../images/aboutme.png" alt="")
+					.about-me__right
+						h2.main-title Обо мне
+						h3.subtitle Обо мне
+						p.about-me__name Синицым Александр Александрович
+						p.about-me__description врач флеболог, сосудистый хирург, врач УЗИ
+						.about-me__experience
+							p стаж работы - 
+								span 16 лет
+							p квалификация - 
+								span высшая категория
+						.block(style="height:100%")
+							p.ta Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque aliquid tenetur incidunt delectus dignissimos aspernatur doloribus, perspiciatis distinctio consequuntur voluptate consequatur voluptatibus nisi amet deserunt veritatis ducimus dolores, fugiat laborum consectetur. Consequuntur, impedit tempore nulla iure provident recusandae. Neque iusto rem fugit distinctio voluptatibus alias similique aut consectetur, harum inventore.
+							a.read-next(href="#") показать полностью
+
+		section.member
+			.container
+				h2.main-title Являюсь членом ассоциаций
+				h3.subtitle Являюсь членом ассоциаций
+				.member__wrapper
+					ul.member__list.slick-slider-5
+						.item
+							img(src="../images/brend1.svg", alt="" width="162" height="112")
+						.item
+							img(src="../images/brend2.png", alt="" width="75" height="111")
+						.item
+							img(src="../images/brend3.jpg", alt="" width="229" height="113")
+						.item
+							img(src="../images/brend4.png", alt="" width="110" height="110")
+
+		section.certificats
+			.container
+				h2.main-title.main-title--center Сертификаты
+				h3.subtitle.subtitle--center Сертификаты
+				.certificats-slider.slick-slider-4
+					.item
+						a(data-fancybox="gallery" href="../images/certificat.jpg")
+							img(src="../images/certificat.jpg")
+					.item
+						a(data-fancybox="gallery" href="../images/certificat.jpg")
+							img(src="../images/certificat.jpg")
+					.item
+						a(data-fancybox="gallery" href="../images/certificat.jpg")
+							img(src="../images/certificat.jpg")
+					.item
+						a(data-fancybox="gallery" href="../images/certificat.jpg")
+							img(src="../images/certificat.jpg")
+					.item
+						a(data-fancybox="gallery" href="../images/certificat.jpg")
+							img(src="../images/certificat.jpg")
+					.item
+						a(data-fancybox="gallery" href="../images/certificat.jpg")
+							img(src="../images/certificat.jpg")
+
+
+		section.reviews#anchor5
+			.container
+
+				h2.main-title Отзывы
+				h3.subtitle Отзывы
+			.reviews__slider
+				.container
+					.reviews__circle
+						span.circle-1
+					.reviews-slider.slick-slider-2
+						.item
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ducimus obcaecati labore, maiores laboriosam voluptatibus dignissimos deserunt similique fuga illum, nihil odit est ipsum harum doloribus dolores expedita asperiores! Culpa beatae optio ullam commodi vitae, saepe quibusdam dicta facere quos? Tenetur reiciendis cumque vero excepturi quas in quisquam maiores est.
+							span.reviews-slider__initials Фамилия Имя
+						.item
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ducimus obcaecati labore, maiores laboriosam voluptatibus dignissimos deserunt similique fuga illum, nihil odit est ipsum harum doloribus dolores expedita asperiores! Culpa beatae optio ullam commodi vitae, saepe quibusdam dicta facere quos? Tenetur reiciendis cumque vero excepturi quas in quisquam maiores est.
+							span.reviews-slider__initials Фамилия Имя
+						.item
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ducimus obcaecati labore, maiores laboriosam voluptatibus dignissimos deserunt similique fuga illum, nihil odit est ipsum harum doloribus dolores expedita asperiores! Culpa beatae optio ullam commodi vitae, saepe quibusdam dicta facere quos? Tenetur reiciendis cumque vero excepturi quas in quisquam maiores est.
+							span.reviews-slider__initials Фамилия Имя
+
+		section.activities#anchor6
+			.container
+				//- .activities__circle
+				//- 	span.circle-1
+				h2.main-title.main-title--center Виды деятельности
+				h3.subtitle.subtitle--center Виды деятельности
+				.activities__wrapper.slick-slider-3
+					.item
+						.activities__left
+							p.activities__title Медикаментозная терапия
+							.block(style="height:100%")
+								.ta
+									p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis, natus dolores illo corporis eos expedita rem ut rerum voluptates, ad possimus numquam. Iusto consequuntur amet ea expedita quaerat. Error optio magni illum, harum cum quaerat mollitia? Tempore dolorum molestiae unde enim reiciendis distinctio impedit harum quod, dignissimos doloremque necessitatibus.
+									p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis, natus dolores illo corporis eos expedita rem ut rerum voluptates, ad possimus numquam. Iusto consequuntur amet ea expedita quaerat. Error optio magni illum, harum cum quaerat mollitia? Tempore dolorum molestiae unde enim reiciendis distinctio impedit harum quod, dignissimos doloremque necessitatibus.
+								a.read-next(href="#") показать полностью
+						.activities__right
+							img(src="../images/activities.png" alt="")
+					.item
+						.activities__left
+							p.activities__title Медикаментозная терапия
+							.block(style="height:100%")
+								.ta
+									p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis, natus dolores illo corporis eos expedita rem ut rerum voluptates, ad possimus numquam. Iusto consequuntur amet ea expedita quaerat. Error optio magni illum, harum cum quaerat mollitia? Tempore dolorum molestiae unde enim reiciendis distinctio impedit harum quod, dignissimos doloremque necessitatibus.
+									p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis, natus dolores illo corporis eos expedita rem ut rerum voluptates, ad possimus numquam. Iusto consequuntur amet ea expedita quaerat. Error optio magni illum, harum cum quaerat mollitia? Tempore dolorum molestiae unde enim reiciendis distinctio impedit harum quod, dignissimos doloremque necessitatibus.
+								a.read-next(href="#") показать полностью
+						.activities__right
+							img(src="../images/activities.png" alt="")
+	footer.main-footer
+		.container
+			.main-footer__wrapper
+				ul.main-footer__list
+					li.main-footer__list-title Адреса
+					li.main-footer__list-item г. Курск, ул. Ленина, д.75
+					li.main-footer__list-item г. Курск, ул. Ленина, д.75
+				ul.main-footer__list
+					li.main-footer__list-title Номера
+					li.main-footer__list-item 
+						a(href="tel:89124567890") 8 (912) 456 78 90
+					li.main-footer__list-item 
+						a(href="tel:89124567890") 8 (912) 456 78 90
+				ul.main-footer__list
+					li.main-footer__list-title 
+						span.main-footer__social-title Социальные сети
+						ul.main-footer__social
+							li
+								a(href="#")
+									img(src="../images/fb.svg" alt="")
+							li
+								a(href="#")
+									img(src="../images/vk.svg" alt="")
+							li
+								a(href="#")
+									img(src="../images/inst.svg" alt="")
+			span.copyright Сделано в 
+				a(href="kvokka.com") kvokka
+	.mobile-menu
+		ul.mobile-menu__list
+			li
+				a(href="#anchor1") Главная
+			li
+				a(href="#anchor2") Направления
+			li
+				a(href="#anchor3") Результаты
+			li
+				a(href="#anchor4") Обо мне
+			li
+				a(href="#anchor5") Отзывы
+			li
+				a(href="#anchor6") Контакты
+			li
+				div.close
+					span
+					span
+

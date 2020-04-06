@@ -1,0 +1,33 @@
+.reviews-slider {
+  padding: 0 60px;
+  position: relative;
+  z-index: 3;
+  .item {
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    z-index: 20;
+  }
+  .slick-slide {
+    padding-right: 30px;
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+  }
+  @media (max-width: 576px) {
+    padding: 0;
+  }
+}
+
+.reviews-slider__initials {
+  font-size: 17px;
+  font-weight: 600;
+  color: $color-light-blue;
+  display: block;
+  text-align: right;
+  margin-top: 15px;
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
+}
