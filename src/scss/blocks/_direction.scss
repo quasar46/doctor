@@ -53,8 +53,8 @@
 		height: 1270px;
 		background-image: url("../images/direction-circle.svg");
 		background-repeat: no-repeat;
-		top: 200px;
-		z-index: 3;
+		top: -846px;
+		right: -926px;
 	}
 
 	@media (max-width: 992px) {
@@ -99,15 +99,19 @@
 		font-weight: 600;
 		color: $color-dark-blue;
 	}
+	&.active {
+		margin-bottom: 20px;
+	}
+	@media (max-width: 576px) {
+		margin-bottom: 0;
+	}
 }
 
 .direction__picture {
-	margin-right: 30px;
-	margin-left: 20px;
 	width: 102px;
 	height: 102px;
-	background-color: #f2f2f2;
-	border-radius: 50%;
+	margin-right: 30px;
+	margin-left: 20px;
 	position: relative;
 	svg {
 		position: absolute;
@@ -121,6 +125,21 @@
 	}
 	@media (max-width: 576px) {
 		margin-right: 0;
+		width: 55px;
+		height: 55px;
+		margin-left: 0;
+	}
+}
+
+.direction__circle-pic {
+	position: absolute;
+	width: 102px;
+	height: 102px;
+	background-color: #f2f2f2;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	@media (max-width: 576px) {
 		width: 55px;
 		height: 55px;
 	}

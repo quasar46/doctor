@@ -15,6 +15,10 @@ html {
 	box-sizing: border-box;
 }
 
+main {
+	overflow: hidden;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -70,6 +74,7 @@ a {
 	&.read-next {
 		text-decoration: underline;
 		display: none;
+		color: $color-light-blue;
 		@media (max-width: 576px) {
 			display: block;
 		}

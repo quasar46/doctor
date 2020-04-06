@@ -11,6 +11,9 @@
     padding-bottom: 90px;
     .subtitle {
         margin-bottom: 40px;
+        @media (max-width: 576px) {
+            text-align: center;
+        }
     }
     @media (max-width: 768px) {
         padding-bottom: 60px;

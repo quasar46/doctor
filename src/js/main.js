@@ -5,7 +5,7 @@ $(document).ready(function () {
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		nav: true,
+		nav: false,
 		centerMode: false,
 		responsive: [
 			{
@@ -27,6 +27,14 @@ $(document).ready(function () {
 		]
 	});
 });
+
+$('.results__buttons .slick-next').on('click', function () {
+	$('.result-slider').slick('slickNext');
+})
+
+$('.results__buttons .slick-prev').on('click', function () {
+	$('.result-slider').slick('slickPrev');
+})
 
 $(document).ready(function () {
 	$('.slick-slider-2').slick({
@@ -100,6 +108,7 @@ $(document).ready(function () {
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
+		nav: true,
 		responsive: [
 			{
 				breakpoint: 992,
@@ -152,7 +161,13 @@ $(document).ready(function () {
 		})
 	})
 	var dots = document.querySelectorAll('.slick-slider-3 .slick-dots button');
+	// сворачивает блок при клике на дот
 	$(dots).on('click', function () {
+		$('.ta').css('height', '100px');
+		$('.read-next').html('показать полностью');
+	})
+	// сворачивает блок при слайде
+	$('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
 		$('.ta').css('height', '100px');
 		$('.read-next').html('показать полностью');
 	})
@@ -172,12 +187,15 @@ $(document).ready(function () {
 $(document).ready(function () {
 	$('.burger').on('click', function () {
 		$('.mobile-menu').toggleClass('active');
+		$('body').css('overflow', 'hidden');
 	})
 	$('.mobile-menu__list a').on('click', function () {
 		$('.mobile-menu').removeClass('active');
+		$('body').css('overflow', 'visible');
 	})
 	$('.mobile-menu .close').on('click', function () {
 		$('.mobile-menu').removeClass('active');
+		$('body').css('overflow', 'visible');
 	})
 })
 
@@ -187,3 +205,8 @@ $(document).ready(function () {
 
 	});
 });
+
+// услуги
+$('.direction__item').on('click', function () {
+	$('.direction__top').addClass.toggle('active')
+})

@@ -17,7 +17,6 @@
 	li {
 		padding: 0 19px;
 		display: flex;
-		align-items: center;
 		border-bottom: 7px solid transparent;
 		cursor: pointer;
 
@@ -32,6 +31,8 @@
 	a {
 		font-size: 17px;
 		color: $color-text;
+		display: flex;
+		align-items: center;
 	}
 	@media (max-width: 1024px) {
 		margin-right: 20px;

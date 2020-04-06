@@ -321,7 +321,7 @@ gulp.task('optimize:images', () => {
 				interlaced: true,
 			}),
 			$.imagemin.optipng({
-				optimizationLevel: 3,
+				optimizationLevel: 7,
 			}),
 			$.imageminMozjpeg({
 				progressive: true,
@@ -482,3 +482,4 @@ gulp.task('default', gulp.series(
 		'serve'
 	)
 ));
+
