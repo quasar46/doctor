@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+// const webpack = require('webpack');
 
 module.exports = {
 	entry: './src/js/main.js',
@@ -31,11 +31,11 @@ module.exports = {
 		},
 	},
 	devtool: 'source-map',
-	plugins: [
-		new webpack.ProvidePlugin({
-			$: 'jquery',
-			jQuery: 'jquery'
-		}),
-	]
+	// plugins: [
+	// 	new webpack.ProvidePlugin({
+	// 		$: 'jquery',
+	// 		jQuery: 'jquery'
+	// 	}),
+	// ]
 };
 

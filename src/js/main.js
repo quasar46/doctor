@@ -146,9 +146,10 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
+
 // show text
 $(document).ready(function () {
-	$('.show-text').on('click', function () {
+	$('body').on('click', '.show-text', function () {
 		if ($(this).prev().is(':visible')) {
 			$(this).text('показать полностью');
 			$(this).prev().hide('slow');
@@ -157,24 +158,33 @@ $(document).ready(function () {
 			$(this).prev().show('slow');
 		}
 	})
-});
+	// $('.show-text').on('click', function () {
+	// 	if ($(this).prev().is(':visible')) {
+	// 		$(this).text('показать полностью');
+	// 		$(this).prev().hide('slow');
+	// 	} else {
+	// 		$(this).text('скрыть').css('display', 'block');
+	// 		$(this).prev().show('slow');
+	// 	}
+	// })
 
-$('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
-	if ($('.show-text').prev().is(':visible')) {
-		$('.show-text').text('показать полностью');
-		$('.show-text').prev().hide('slow');
-	}
-})
+	//скрывает текст при слайде
+	$('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
+		if ($('.show-text').prev().is(':visible')) {
+			$('.show-text').text('показать полностью');
+			$('.show-text').prev().hide('slow');
+		}
+	})
 
-
-$(document).ready(function () {
-	if ($('.activities__title p').height() > 100) {
+	if ($('.text-hidden').height() > 100) {
+		$('.text-hidden').attr('hidden', '');
 		$('.activities__title a').addClass('show-text');
-		console.log('высота p больше 100');
-	} else {
-		console.log('высота p меньшье 100');
 	}
 });
+
+
+
+
 
 // anchor
 $(document).ready(function () {
@@ -202,30 +212,30 @@ $(document).ready(function () {
 	})
 })
 
-//fancybox
-// $(document).ready(function () {
-// 	$("[data-fancybox]").fancybox({
-
-// 	});
-// });
-
 // услуги
 $(document).ready(function () {
 	$('.direction__item').on('click', function () {
-		$('.direction__top').addClass.toggle('active')
+		$('.direction__top').addlClass('active')
 	})
 })
 
 // popup & overlay
+// $(document).ready(function () {
+// 	$('#write-to-me').on('click', function () {
+// 		$('.overlay').addClass('active');
+// 		$('.popup').addClass('active');
+// 	})
+// 	$('.overlay.active').on('click', function () {
+// 		$('.popup').removeClass('active');
+// 		$('.overlay').removeClass('active');
+// 	})
+// })
+
 $(document).ready(function () {
 	$('#write-to-me').on('click', function () {
-		$('body').addClass('overlay');
-		$('.popup').addClass('active');
+		$('#overlay').addClass('active');
 	})
-	if ($('body').hasClass('overlay')) {
-		$('body').on('click', function () {
-			$('.popup').removeClass('active');
-			$('body').removeClass('overlay');
-		})
-	}
+	$('#overlay').on('click', function () {
+		$('#overlay').removeClass('active');
+	})
 })
