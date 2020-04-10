@@ -50,7 +50,7 @@
   display: block;
   text-align: right;
   a {
-    color: $color-light-blue;
+    color: $color-dark-blue;
     font-weight: 600;
   }
 }
@@ -64,6 +64,30 @@
     a {
       width: 31px;
       height: 31px;
+    }
+    a.email {
+      background-image: url("../images/socials/email.svg");
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.75;
+        transition: 0.3s;
+      }
+    }
+    a.fb {
+      background-image: url("../images/socials/fb.svg");
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.75;
+        transition: 0.3s;
+      }
+    }
+    a.inst {
+      background-image: url("../images/socials/inst.svg");
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.75;
+        transition: 0.3s;
+      }
     }
   }
   @media (max-width: 576px) {

@@ -4,9 +4,28 @@ let yargs = require('yargs');
 let path = require('path');
 let del = require('del');
 let webpackConfig = require('./webpack.config');
+let imagemin = require('gulp-imagemin');
+let imgCompress = require('imagemin-jpeg-recompress');
 
 let emittyPug;
 let errorHandler;
+
+// Optimize images
+gulp.task('img', function () {
+	return gulp.src('src/images/**/*')
+		.pipe(imagemin([
+			imgCompress({
+				loops: 4,
+				min: 70,
+				max: 80,
+				quality: 'high'
+			}),
+			imagemin.gifsicle(),
+			imagemin.optipng(),
+			imagemin.svgo()
+		]))
+		.pipe(gulp.dest('build/images'));
+});
 
 let argv = yargs.default({
 	cache: true,
@@ -328,7 +347,7 @@ gulp.task('optimize:images', () => {
 				quality: 80,
 			}),
 		]))
-		.pipe(gulp.dest('src/images'));
+		.pipe(gulp.dest('build/images'));
 });
 
 gulp.task('optimize:svg', () => {
@@ -340,7 +359,7 @@ gulp.task('optimize:svg', () => {
 		}))
 		.pipe($.if(argv.debug, $.debug()))
 		.pipe($.svgmin(svgoConfig(false)))
-		.pipe(gulp.dest('src/images'));
+		.pipe(gulp.dest('build/images'));
 });
 
 gulp.task('watch', () => {

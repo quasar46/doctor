@@ -1,9 +1,10 @@
 .certificats-slider {
     .item {
-        width: 252px;
+        width: 200px;
         position: relative;
         z-index: 999;
         display: flex !important;
         justify-content: center;
+        padding-right: 20px;
     }
 }

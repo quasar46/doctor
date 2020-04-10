@@ -74,7 +74,7 @@ a {
 		display: block;
 		text-decoration: underline;
 		display: inline-block;
-		color: $color-light-blue;
+		color: $color-dark-blue;
 		cursor: pointer;
 	}
 }
@@ -85,4 +85,18 @@ a {
 	padding: 0 15px;
 	margin: 0 auto;
 	position: relative;
+}
+
+.on-mobile {
+	display: none;
+	@media (max-width: 992px) {
+		display: block;
+	}
+}
+
+.on-desktop {
+	display: block;
+	@media (max-width: 992px) {
+		display: none;
+	}
 }

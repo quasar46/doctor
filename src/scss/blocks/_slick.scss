@@ -85,6 +85,7 @@
             height: 100%;
             top: 0;
             left: 0;
+            opacity: 1;
         }
     }
 
@@ -99,6 +100,7 @@
             height: 100%;
             top: 0;
             right: 0;
+            opacity: 1;
         }
     }
 }
@@ -148,6 +150,7 @@
             background-image: url("../images/arrow-left.svg");
             top: 0;
             left: 0;
+            opacity: 1;
         }
         @media (max-width: 929px) {
             margin-left: -25px;
@@ -159,6 +162,7 @@
             background-image: url("../images/arrow-right.svg");
             top: 0;
             right: 0;
+            opacity: 1;
         }
         @media (max-width: 992px) {
             margin-right: -25px;
@@ -181,7 +185,7 @@
                 width: 8px;
                 height: 8px;
                 &::before {
-                    background: $color-light-blue;
+                    background: $color-dark-blue;
                     border-radius: 50%;
                     width: 8px;
                     height: 8px;
@@ -201,5 +205,19 @@
 
 .slick-slider-5 {
     .slick-track {
+    }
+}
+
+.slick-prev {
+    &:hover::before {
+        transition: 0.3s;
+        background-image: url(../images/arrow-left-active.svg);
+    }
+}
+
+.slick-next {
+    &:hover::before {
+        transition: 0.3s;
+        background-image: url(../images/arrow-right-active.svg);
     }
 }

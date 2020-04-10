@@ -41,6 +41,7 @@ $(document).ready(function () {
 		infinite: true,
 		slidesToShow: 2,
 		slidesToScroll: 1,
+		dots: true,
 		responsive: [
 
 			{
@@ -172,7 +173,7 @@ $(document).ready(function () {
 	$('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
 		if ($('.show-text').prev().is(':visible')) {
 			$('.show-text').text('показать полностью');
-			$('.show-text').prev().hide('slow');
+			$('.show-text').prev().hide('fast');
 		}
 	})
 
@@ -181,10 +182,6 @@ $(document).ready(function () {
 		$('.activities__title a').addClass('show-text');
 	}
 });
-
-
-
-
 
 // anchor
 $(document).ready(function () {
@@ -213,24 +210,13 @@ $(document).ready(function () {
 })
 
 // услуги
-$(document).ready(function () {
-	$('.direction__item').on('click', function () {
-		$('.direction__top').addlClass('active')
-	})
-})
-
-// popup & overlay
 // $(document).ready(function () {
-// 	$('#write-to-me').on('click', function () {
-// 		$('.overlay').addClass('active');
-// 		$('.popup').addClass('active');
-// 	})
-// 	$('.overlay.active').on('click', function () {
-// 		$('.popup').removeClass('active');
-// 		$('.overlay').removeClass('active');
+// 	$('.direction__item').on('click', function () {
+// 		$('.direction__top').addСlass('active')
 // 	})
 // })
 
+//popup & overlay
 $(document).ready(function () {
 	$('#write-to-me').on('click', function () {
 		$('#overlay').addClass('active');
@@ -238,4 +224,16 @@ $(document).ready(function () {
 	$('#overlay').on('click', function () {
 		$('#overlay').removeClass('active');
 	})
+	$('#overlay-review').on('click', function () {
+		$('#overlay-review').removeClass('active');
+		$('.review-big').removeClass('active');
+	})
+})
+
+var reviewsBig = Array.from(document.querySelectorAll('.review-mini'));
+var overlayReview = document.querySelector('#overlay-review');
+
+reviewsBig.forEach((item, index) => {
+	const reviewsMini = Array.from(document.querySelectorAll('.review-big'));
+	item.onclick = () => { overlayReview.classList.add('active'); reviewsMini[index].classList.add('active');  };
 })
