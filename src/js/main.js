@@ -227,11 +227,16 @@ $(document).ready(function () {
 	$('#overlay-review').on('click', function () {
 		$('#overlay-review').removeClass('active');
 		$('.review-big').removeClass('active');
+		$('body').css('overflow', 'visible');
 	})
 })
 
 var reviewsBig = Array.from(document.querySelectorAll('.review-mini'));
 var overlayReview = document.querySelector('#overlay-review');
+
+$('.review-mini').on('click', function() {
+	$('body').css('overflow', 'hidden');
+})
 
 reviewsBig.forEach((item, index) => {
 	const reviewsMini = Array.from(document.querySelectorAll('.review-big'));

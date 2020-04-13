@@ -8,12 +8,15 @@
 			padding: 0;
 		}
 	}
+
 	@media (max-width: 992px) {
 		background-image: none;
 	}
+
 	@media (max-width: 768px) {
 		padding-top: 0;
 	}
+
 	@media (max-width: 576px) {
 		padding-bottom: 60px;
 	}
@@ -23,6 +26,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
+
 	@media (max-width: 768px) {
 		flex-direction: column;
 	}
@@ -35,19 +39,23 @@
 	font-size: 26px;
 	font-weight: 600;
 	margin-bottom: 30px;
+
 	span {
 		margin-bottom: 10px;
 	}
+
 	span {
 		&:first-child {
 			@media (max-width: 576px) {
 				font-size: 25px;
 				font-weight: 700;
+
 				i.br {
 					display: block;
 				}
 			}
 		}
+
 		&:last-child {
 			@media (max-width: 576px) {
 				font-size: 17px;
@@ -71,6 +79,7 @@
 	z-index: 30;
 	max-width: 480px;
 	width: 100%;
+
 	li {
 		padding-left: 20px;
 		margin-bottom: 15px;
@@ -89,6 +98,7 @@
 			border-radius: 50%;
 		}
 	}
+
 	@media (max-width: 768px) {
 		padding: 0 15px;
 		padding-top: 20px;
@@ -97,9 +107,11 @@
 		order: 1;
 	}
 }
+
 .name__photo {
 	position: relative;
 	z-index: 10;
+
 	@media (max-width: 768px) {
 		overflow: hidden;
 		position: relative;
@@ -108,6 +120,7 @@
 		justify-content: center;
 		background-color: #f2f2f2;
 		padding-top: 10px;
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -118,6 +131,7 @@
 			top: -50px;
 			left: -50px;
 		}
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -130,6 +144,7 @@
 		}
 	}
 }
+
 .name__photo-pic {
 	position: relative;
 	height: 594px;
@@ -137,9 +152,11 @@
 	background-image: url("../images/photo.png");
 	background-size: cover;
 	background-repeat: no-repeat;
+
 	@media (max-width: 992px) {
 		background-image: url("../images/photo-full.png");
 	}
+
 	@media (max-width: 768px) {
 		background-image: url("../images/photo-full.png");
 		width: 235px;
@@ -166,12 +183,14 @@
 		&:first-child {
 			margin-right: 20px;
 		}
+
 		&:hover {
 			border: 2px solid $color-dark-blue;
 			transition: 0.3s;
 			color: $color-dark-blue;
 			background-color: #fff;
 		}
+
 		@media (max-width: 576px) {
 			font-size: 16px;
 			padding: 2px 20px;
@@ -186,6 +205,7 @@
 	top: -990px;
 	left: -500px;
 	z-index: 20;
+
 	.circle-1 {
 		background-image: url("../images/name-circle.svg");
 		background-repeat: no-repeat;
@@ -194,6 +214,7 @@
 		height: 100%;
 		top: 24px;
 	}
+
 	@media (max-width: 992px) {
 		display: none;
 	}
