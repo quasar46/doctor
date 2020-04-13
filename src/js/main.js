@@ -159,21 +159,13 @@ $(document).ready(function () {
 			$(this).prev().show('slow');
 		}
 	})
-	// $('.show-text').on('click', function () {
-	// 	if ($(this).prev().is(':visible')) {
-	// 		$(this).text('показать полностью');
-	// 		$(this).prev().hide('slow');
-	// 	} else {
-	// 		$(this).text('скрыть').css('display', 'block');
-	// 		$(this).prev().show('slow');
-	// 	}
-	// })
 
 	//скрывает текст при слайде
 	$('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
 		if ($('.show-text').prev().is(':visible')) {
 			$('.show-text').text('показать полностью');
-			$('.show-text').prev().hide('fast');
+			// $('.show-text').prev().hide('fast');
+			$('.text-hidden').css('display', 'none');
 		}
 	})
 
@@ -209,13 +201,6 @@ $(document).ready(function () {
 	})
 })
 
-// услуги
-// $(document).ready(function () {
-// 	$('.direction__item').on('click', function () {
-// 		$('.direction__top').addСlass('active')
-// 	})
-// })
-
 //popup & overlay
 $(document).ready(function () {
 	$('#write-to-me').on('click', function () {
@@ -234,11 +219,11 @@ $(document).ready(function () {
 var reviewsBig = Array.from(document.querySelectorAll('.review-mini'));
 var overlayReview = document.querySelector('#overlay-review');
 
-$('.review-mini').on('click', function() {
+$('.review-mini').on('click', function () {
 	$('body').css('overflow', 'hidden');
 })
 
 reviewsBig.forEach((item, index) => {
 	const reviewsMini = Array.from(document.querySelectorAll('.review-big'));
-	item.onclick = () => { overlayReview.classList.add('active'); reviewsMini[index].classList.add('active');  };
+	item.onclick = () => { overlayReview.classList.add('active'); reviewsMini[index].classList.add('active'); };
 })
