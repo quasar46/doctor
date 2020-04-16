@@ -9,6 +9,7 @@
 }
 
 .main-nav__list {
+	padding-top: 40px;
 	display: flex;
 	flex: 1 0 auto;
 	justify-content: space-between;
@@ -47,13 +48,19 @@
 	display: flex;
 	flex-direction: column;
 	text-align: right;
-	padding-top: 25px;
+	padding-top: 15px;
 	padding-bottom: 15px;
 
 	a,
 	span {
 		color: $color-dark-blue;
 		font-weight: 600;
+	}
+
+	a {
+		&:hover {
+			color: $color-red;
+		}
 	}
 
 	li {
@@ -75,7 +82,34 @@
 		width: 33px;
 		height: 33px;
 	}
+	.phone {
+		width: 28px;
+		height: 28px;
+		background-image: url("../images/phone.svg");
+		&:hover {
+			background: url("../images/phone-hover.svg");
+		}
+	}
+	.location {
+		width: 28px;
+		height: 28px;
+		background-image: url("../images/location.svg");
+		&:hover {
+			background-image: url("../images/location-hover.svg");
+		}
+	}
 	@media (max-width: 992px) {
 		flex-direction: row;
+	}
+}
+
+.main-nav__inner {
+	.main-footer__social {
+		padding-top: 0;
+		padding-bottom: 15px;
+		justify-content: flex-end;
+		@media (max-width: 992px) {
+			display: none;
+		}
 	}
 }

@@ -153,10 +153,10 @@ $(document).ready(function () {
 	$('body').on('click', '.show-text', function () {
 		if ($(this).prev().is(':visible')) {
 			$(this).text('показать полностью');
-			$(this).prev().hide('slow');
+			$(this).prev().slideUp();
 		} else {
 			$(this).text('скрыть').css('display', 'block');
-			$(this).prev().show('slow');
+			$(this).prev().slideDown();
 		}
 	})
 
@@ -201,6 +201,12 @@ $(document).ready(function () {
 	})
 })
 
+// // ловит элемент на котором кликнул
+// document.querySelector('body').addEventListener('click', function (event) {
+// 	console.log(event.target);
+// })
+
+
 //popup & overlay
 $(document).ready(function () {
 	$('#write-to-me').on('click', function () {
@@ -218,12 +224,32 @@ $(document).ready(function () {
 
 var reviewsBig = Array.from(document.querySelectorAll('.review-mini'));
 var overlayReview = document.querySelector('#overlay-review');
+var body = document.querySelector('body');
 
-$('.review-mini').on('click', function () {
-	$('body').css('overflow', 'hidden');
-})
 
 reviewsBig.forEach((item, index) => {
 	const reviewsMini = Array.from(document.querySelectorAll('.review-big'));
-	item.onclick = () => { overlayReview.classList.add('active'); reviewsMini[index].classList.add('active'); };
+	item.onclick = () => { overlayReview.classList.add('active'); reviewsMini[index].classList.add('active'); body.style="overflow: hidden";};
 })
+
+
+
+$('.link-1').on('click', function () {
+	$('.slick-slider-3').slick('slickGoTo', 3);
+})
+$('.link-2').on('click', function () {
+	$('.slick-slider-3').slick('slickGoTo', 0);
+})
+$('.link-3').on('click', function () {
+	$('.slick-slider-3').slick('slickGoTo', 2);
+})
+$('.link-4').on('click', function () {
+	$('.slick-slider-3').slick('slickGoTo', 1);
+})
+$('.link-5').on('click', function () {
+	$('.slick-slider-3').slick('slickGoTo', 5);
+})
+$('.link-6').on('click', function () {
+	$('.slick-slider-3').slick('slickGoTo', 4);
+})
+

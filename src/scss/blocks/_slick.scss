@@ -191,6 +191,11 @@
                     height: 8px;
                     font-size: 0;
                 }
+                &:hover {
+                    &::before {
+                        background-color: $color-red;
+                    }
+                }
             }
         }
     }
@@ -203,21 +208,15 @@
     }
 }
 
-.slick-slider-5 {
-    .slick-track {
-    }
-}
-
 .slick-prev {
     &:hover::before {
-        transition: 0.3s;
-        background-image: url(../images/arrow-left-active.svg);
+        background-image: url(../images/arrow-right-active.svg);
+        transform: rotate(180deg);
     }
 }
 
 .slick-next {
     &:hover::before {
-        transition: 0.3s;
         background-image: url(../images/arrow-right-active.svg);
     }
 }

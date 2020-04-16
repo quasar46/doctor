@@ -40,6 +40,9 @@
   margin-bottom: 10px;
   a {
     color: $color-text;
+    &:hover {
+      color: $color-red;
+    }
   }
   @media (max-width: 576px) {
     font-size: 16px;
@@ -52,6 +55,9 @@
   a {
     color: $color-dark-blue;
     font-weight: 600;
+    &:hover {
+      color: $color-red;
+    }
   }
 }
 
@@ -67,26 +73,30 @@
     }
     a.email {
       background-image: url("../images/socials/email.svg");
-      transition: 0.3s;
       &:hover {
         opacity: 0.75;
-        transition: 0.3s;
+        background-image: url("../images/socials/email-hover.svg");
       }
     }
     a.fb {
       background-image: url("../images/socials/fb.svg");
-      transition: 0.3s;
       &:hover {
         opacity: 0.75;
-        transition: 0.3s;
+        background-image: url("../images/socials/fb-hover.svg");
+      }
+    }
+    a.vk {
+      background-image: url("../images/socials/vk.svg");
+      &:hover {
+        opacity: 0.75;
+        background-image: url("../images/socials/vk-hover.svg");
       }
     }
     a.inst {
       background-image: url("../images/socials/inst.svg");
-      transition: 0.3s;
       &:hover {
         opacity: 0.75;
-        transition: 0.3s;
+        background-image: url("../images/socials/inst-hover.svg");
       }
     }
   }

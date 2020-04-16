@@ -77,6 +77,9 @@ a {
 		color: $color-dark-blue;
 		cursor: pointer;
 	}
+	&:hover {
+		color: $color-red;
+	}
 }
 
 .container {
