@@ -185,10 +185,12 @@
 		}
 
 		&:hover {
-			border: 2px solid $color-red;
-			transition: 0.3s;
-			color: $color-red;
-			background-color: #fff;
+			@media (min-width: 768px) {
+				border: 2px solid $color-red;
+				transition: 0.3s;
+				color: $color-red;
+				background-color: #fff;
+			}
 		}
 
 		@media (max-width: 576px) {

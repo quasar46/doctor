@@ -69,6 +69,7 @@ h3.subtitle {
 }
 
 a {
+	outline: none;
 	text-decoration: none;
 	&.show-text {
 		display: block;
@@ -78,7 +79,9 @@ a {
 		cursor: pointer;
 	}
 	&:hover {
-		color: $color-red;
+		@media (min-width: 768px) {
+			color: $color-red;
+		}
 	}
 }
 

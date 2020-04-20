@@ -17,8 +17,10 @@
         color: $color-dark-blue;
         font-weight: 600;
         &:hover {
-            color: $color-red;
-            transition: all 0.3s;
+            @media (min-width: 768px) {
+                color: $color-red;
+                transition: all 0.3s;
+            }
         }
     }
     &.active {

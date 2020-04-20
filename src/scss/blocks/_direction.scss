@@ -71,7 +71,9 @@
 		position: relative;
 		z-index: 100;
 		&:hover {
-			color: $color-red;
+			@media (min-width: 768px) {
+				color: $color-red;
+			}
 		}
 	}
 	@media (max-width: 992px) {

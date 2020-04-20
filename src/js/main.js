@@ -38,7 +38,7 @@ $('.results__buttons .slick-prev').on('click', function () {
 
 $(document).ready(function () {
 	$('.slick-slider-2').slick({
-		infinite: true,
+		infinite: false,
 		slidesToShow: 2,
 		slidesToScroll: 1,
 		dots: true,
@@ -130,6 +130,11 @@ $(document).ready(function () {
 	});
 });
 
+$(document).on('afterShow.fb', function (e, instance, slide) {
+	var index = instance.currIndex - 1
+	$('.slick-slider-1').slick('slickGoTo', index)
+});
+
 // accordion
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -146,9 +151,7 @@ for (i = 0; i < acc.length; i++) {
 	});
 }
 
-
-
-// show text
+//show text
 $(document).ready(function () {
 	$('body').on('click', '.show-text', function () {
 		if ($(this).prev().is(':visible')) {
@@ -161,19 +164,21 @@ $(document).ready(function () {
 	})
 
 	//скрывает текст при слайде
-	$('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
-		if ($('.show-text').prev().is(':visible')) {
-			$('.show-text').text('показать полностью');
-			// $('.show-text').prev().hide('fast');
-			$('.text-hidden').css('display', 'none');
-		}
-	})
+	// $('.slick-slider-3').on('afterChange', function (event, click, currentSlide, nextSlide) {
+	// 	if ($('.show-text').prev().is(':visible')) {
+	// 		$('.show-text').text('показать полностью');
+	// 		// $('.show-text').prev().hide('fast');
+	// 		$('.text-hidden').css('display', 'none');
+	// 	}
+	// })
 
-	if ($('.text-hidden').height() > 100) {
-		$('.text-hidden').attr('hidden', '');
-		$('.activities__title a').addClass('show-text');
-	}
+	// if ($('.text-hidden').height() > 100) {
+	// 	$('.text-hidden').attr('hidden', '');
+	// 	$('.activities__title a').addClass('show-text');
+	// }
 });
+
+
 
 // anchor
 $(document).ready(function () {
@@ -201,12 +206,6 @@ $(document).ready(function () {
 	})
 })
 
-// // ловит элемент на котором кликнул
-// document.querySelector('body').addEventListener('click', function (event) {
-// 	console.log(event.target);
-// })
-
-
 //popup & overlay
 $(document).ready(function () {
 	$('#write-to-me').on('click', function () {
@@ -226,12 +225,10 @@ var reviewsBig = Array.from(document.querySelectorAll('.review-mini'));
 var overlayReview = document.querySelector('#overlay-review');
 var body = document.querySelector('body');
 
-
 reviewsBig.forEach((item, index) => {
 	const reviewsMini = Array.from(document.querySelectorAll('.review-big'));
-	item.onclick = () => { overlayReview.classList.add('active'); reviewsMini[index].classList.add('active'); body.style="overflow: hidden";};
+	item.onclick = () => { overlayReview.classList.add('active'); reviewsMini[index].classList.add('active'); body.style = "overflow: hidden"; };
 })
-
 
 
 $('.link-1').on('click', function () {
@@ -252,4 +249,3 @@ $('.link-5').on('click', function () {
 $('.link-6').on('click', function () {
 	$('.slick-slider-3').slick('slickGoTo', 4);
 })
-

@@ -21,11 +21,16 @@
 		border-bottom: 7px solid transparent;
 		cursor: pointer;
 
-		&:hover,
 		&:focus,
 		&.active {
 			border-bottom: 7px solid $color-dark-blue;
 			transition: all 0.3s;
+		}
+		&:hover {
+			@media (min-width: 768px) {
+				border-bottom: 7px solid $color-dark-blue;
+				transition: all 0.3s;
+			}
 		}
 	}
 
@@ -59,7 +64,9 @@
 
 	a {
 		&:hover {
-			color: $color-red;
+			@media (min-width: 768px) {
+				color: $color-red;
+			}
 		}
 	}
 
@@ -87,7 +94,9 @@
 		height: 28px;
 		background-image: url("../images/phone.svg");
 		&:hover {
-			background: url("../images/phone-hover.svg");
+			@media (min-width: 768px) {
+				background: url("../images/phone-hover.svg");
+			}
 		}
 	}
 	.location {
@@ -95,7 +104,9 @@
 		height: 28px;
 		background-image: url("../images/location.svg");
 		&:hover {
-			background-image: url("../images/location-hover.svg");
+			@media (min-width: 768px) {
+				background-image: url("../images/location-hover.svg");
+			}
 		}
 	}
 	@media (max-width: 992px) {

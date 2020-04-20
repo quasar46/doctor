@@ -1,6 +1,5 @@
 .activities {
 	padding-bottom: 150px;
-	background-image: url("../images/footer-circle.svg");
 	background-repeat: no-repeat;
 	background-position: -500px 680px;
 	.subtitle {
@@ -62,10 +61,14 @@
 		margin-top: 20px;
 		order: 0;
 		margin-bottom: 20px;
+		display: flex;
 		picture {
 			text-align: center;
 			display: flex;
 			justify-content: center;
+			align-self: center;
+			width: 150px;
+			height: 150px;
 		}
 	}
 	// @media (max-width: 576px) {
@@ -96,7 +99,6 @@
 	z-index: -1;
 	.circle-1 {
 		position: absolute;
-		background-image: url("../images/footer-circle.svg");
 		background-repeat: no-repeat;
 		width: 100%;
 		height: 100%;

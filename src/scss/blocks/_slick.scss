@@ -192,8 +192,10 @@
                     font-size: 0;
                 }
                 &:hover {
-                    &::before {
-                        background-color: $color-red;
+                    @media (min-width: 768px) {
+                        &::before {
+                            background-color: $color-red;
+                        }
                     }
                 }
             }
@@ -210,13 +212,17 @@
 
 .slick-prev {
     &:hover::before {
-        background-image: url(../images/arrow-right-active.svg);
-        transform: rotate(180deg);
+        @media (min-width: 768px) {
+            background-image: url(../images/arrow-right-active.svg);
+            transform: rotate(180deg);
+        }
     }
 }
 
 .slick-next {
     &:hover::before {
-        background-image: url(../images/arrow-right-active.svg);
+        @media (min-width: 768px) {
+            background-image: url(../images/arrow-right-active.svg);
+        }
     }
 }

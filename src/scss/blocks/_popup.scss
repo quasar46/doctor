@@ -23,12 +23,13 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	max-height: 400px;
 	transform: translate(-50%, -50%);
 	background-color: #fff;
 	padding: 20px;
 	font-size: 20px;
 	font-weight: 600;
-
+	overflow-y: auto;
 
 	.main-footer__social {
 		padding-top: 20px;
@@ -38,11 +39,21 @@
 		display: none;
 		font-size: 18px;
 		font-weight: 400;
-		overflow: hidden;
-
+		position: relative;
+		padding: 10px 20px;
 
 		&.active {
 			display: block;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url("../images/cross.svg");
+			top: 0;
+			right: 0;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
 		}
 	}
 
